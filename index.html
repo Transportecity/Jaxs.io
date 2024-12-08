@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransporteCity - Rutas de Transporte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TransporteCity</h1>
+            <p>Explora las rutas de transporte en la ciudad</p>
+        </header>
+        
+        <main>
+            <section class="routes-section">
+                <h2>Lista de Rutas</h2>
+                <input type="text" id="routeSearch" placeholder="Buscar ruta...">
+                <div id="routesList"></div>
+            </section>
+            
+            <section class="map-section">
+                <h2>Mapa de Ruta</h2>
+                <div id="mapContainer"></div>
+                <button id="toggleMapBtn">Cambiar a Mapa de Vuelta</button>
+                <button id="expandMapBtn">Expandir Mapa</button>
+            </section>
+            
+            <section class="route-details">
+                <h2>Detalles de la Ruta</h2>
+                <div id="routeDetails"></div>
+            </section>
+            
+            <section class="add-route-section">
+                <h2>Agregar Nueva Ruta</h2>
+                <form id="addRouteForm">
+                    <label for="routeName">Nombre de la Ruta:</label>
+                    <input type="text" id="routeName" required>
+                    
+                    <label for="routeType">Tipo de Transporte:</label>
+                    <select id="routeType">
+                        <option value="bus">Bus</option>
+                        <option value="train">Tren</option>
+                        <option value="bike">Bicicleta</option>
+                    </select>
+                    
+                    <label for="routeStops">Paradas (separadas por comas):</label>
+                    <textarea id="routeStops" required></textarea>
+                    
+                    <label for="routeStreets">Calles (separadas por comas):</label>
+                    <textarea id="routeStreets" required></textarea>
+                    
+                    <label for="mapLinkIda">Enlace del Mapa de Ida (Google My Maps):</label>
+                    <input type="url" id="mapLinkIda" required>
+                    
+                    <label for="mapLinkVuelta">Enlace del Mapa de Vuelta (Google My Maps):</label>
+                    <input type="url" id="mapLinkVuelta" required>
+                    
+                    <button type="submit">Agregar Ruta</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <div id="expandedMapOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Mapa Expandido</h2>
+            <div id="expandedMapContainer"></div>
+            <button id="toggleExpandedMapBtn">Cambiar a Mapa de Vuelta</button>
+            <button id="closeExpandedMapBtn">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

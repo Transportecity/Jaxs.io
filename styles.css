@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #bbb 3px solid;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+header p {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.routes-section, .map-section, .route-details, .add-route-section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#routeSearch, #addRouteForm input[type="text"], #addRouteForm input[type="url"], #addRouteForm select, #addRouteForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#routesList {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.route-item {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.route-item:hover {
+    background: #e4e4e4;
+}
+
+#mapContainer, #expandedMapContainer {
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.overlay-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+#closeExpandedMapBtn {
+    float: right;
+}
